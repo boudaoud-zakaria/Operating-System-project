@@ -3,7 +3,7 @@
 #include <pthread.h>
 #include <semaphore.h>
 
-// matrix size:
+// matrix size :
 #define N1 3
 #define M1 4
 #define N2 M1  // N2 should be equal to M1 for matrix multiplication

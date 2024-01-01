@@ -1,30 +1,20 @@
-# projet
-projet système d'exploitation
+# ⟫⟫⟫ Operating System project
+⟫⟫⟫ team work :  
+  
+  ※ Boudaoud Hamza Zakaria  
+  ※ Mokrani Mohamed Amine  
+  ※ Bessire Dina  
 
-On veut effectuer en parallèle(En utilisant le modèle producteurs/consommateur) le produit de deux matrices: 
-B (n1* m1)  et C (n2 * m2) ⇒ la matrice résultante A=B*C ;
+# Q1 :  
+We use a two-dimensional array to represent the matrices A, B and C. and a circular queue to represent the buffer T (BufferQueue and the items inside it as BufferItem).  
 
-Les matrices sont remplis par des valeurs aléatoires
+# Q2 :  
+Each producer thread must process a distinct section of matrix B and C. Thus, data sharing is done by dividing the tasks. We also use semaphores to protect and synchronize access to shared data (result matrix and buffer) and lock the critical sections. And suspend the producer threads when the buffer is full and the consumer threads when the buffer is empty.  
 
-Les résultats intermédiaires seront placés dans un tampon de taille “T[N]”.
+# Q3 :  
+Current implementation does not have any predictable risks, because we are using semaphores to carefully protect and synchronize access to shared data (result matrix and buffer) and lock the critical sections.  
 
-Chaque threads producteurs calcule une ligne de la matrice résultante A et range les résultat dans le tampon T
-
-Les threads consommateurs consomment l'élément T[y]  le place dans la matrice résultante A  au bon emplacement!
-
-q1: Quelles sont les structures de données à utiliser ?
-
-q2: Comment allez-vous protéger l'accès à ces données?
-
-q3- quels sont les risques?
-
-1-Cloner le projet github : projet  ; et le modifier le selon les exigences ci-dessus
-
-2- Pour chaque nouvelle idée créer une nouvelle branche; les autres étudiants peuvent améliorer l'idée en créant une nouvelle branche!
-
-3-Les premières réponses sont mieux notées!
-
-4-Bien gérer les éxceptions 
-
-5-Bien gérer les messages d'erreurs!
+###  
+# ⟫⟫⟫ About :  
+The Operating System project involves teamwork with members Boudaoud Hamza Zakaria, Mokrani Mohamed Amine, and Bessire Dina. They use a two-dimensional array for matrices A, B, and C, employing a circular queue for buffer T. Each producer thread handles a distinct section of matrices B and C, with semaphores ensuring protected and synchronized access to shared data. The implementation currently lacks predictable risks due to careful use of semaphores and critical section locks.
 
